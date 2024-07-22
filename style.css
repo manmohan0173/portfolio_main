@@ -1,0 +1,631 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+body{
+    overflow-x:hidden ;
+}
+
+.navbar {
+    height: 10vh;
+    position: fixed;
+    width: 100%;
+
+    display: flex;
+    z-index: 10;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #212529;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#cursor-blur {
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(100px);
+    z-index: 9;
+    transition: all linear 0.4s;
+}
+
+.navbar h2 {
+    color: white;
+    font-size: 2rem;
+    margin-left: 10%;
+}
+
+.nav {
+    height: 100%;
+    width: 40%;
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+a:hover {
+    color: aqua;
+    transition: all linear 0.3s;
+    
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.herosection {
+
+    height: 100vh;
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: end;
+    background-color: #212529;
+    flex-wrap: wrap;
+
+
+}
+
+.infosection {
+    height: 50%;
+    width: 50%;
+    margin-top: 15%;
+    /* border: 5px solid grey; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    gap: 1.5rem;
+}
+
+.heroimage {
+    height: 60%;
+    min-width: 30%;
+    margin-right: 10%;
+    margin-top: 10%;
+    /* border: 5px solid black; */
+    background-image: url("devimg.png");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.infosection h1 {
+    color: aqua;
+}
+
+/* .infosection h3{
+    color: aqua;
+    font-size: 2rem;
+    
+} */
+.auto-type {
+    color: aqua;
+    font-size: 2rem;
+}
+
+span {
+    color: aqua;
+    font-size: 2rem;
+}
+
+.infosection h2 {
+    color: white;
+    font-size: 2rem;
+
+}
+
+#animatetxt {
+    display: flex;
+    gap: 1rem;
+}
+
+.infosection p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.cvbtn {
+    width: 30%;
+    height: 12%;
+    font-size: 1rem;
+    background-color: aqua;
+    color: black;
+    border: none;
+    border-radius: 20px;
+}
+
+.cvbtn:hover {
+    border: 2px solid white;
+    background-color: white;
+    color: black;
+    transition: left linear 0.5s;
+}
+
+.socialbuttons {
+    height: 10%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.fb {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(32, 36, 45);
+    border: 2px solid aqua;
+
+    color: aqua;
+    font-size: 1rem;
+}
+
+.fb:hover {
+    font-size: larger;
+    background-color: white;
+    color: black;
+    transition: all linear 0.2s;
+    height: 3rem;
+    width: 3rem;
+}
+
+.cards {
+    height: 80vh;
+    /* border: 2px solid white; */
+    background-color: #212529;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+}
+
+.card {
+    
+    height: 70%;
+    width: 30%;
+    /* border: 2px solid white; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 20px;
+    color: aqua;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 2rem;
+    background-color: #212529;
+    /* text-wrap: wrap; */
+
+}
+
+#card1 {
+    height: 60%;
+    width: 80%;
+    background-image: url("pngwing.com.png");
+    background-size: cover;
+}
+
+#card2 {
+    height: 60%;
+    width: 80%;
+    background-image: url("programing.png");
+    background-size: cover;
+}
+
+#card3 {
+    height: 60%;
+    width: 80%;
+    background-image: url("editor.png");
+    background-size: cover;
+    /* padding-bottom: 15px; */
+}
+
+.nav i {
+    display: none;
+}
+
+.card p {
+    display: none;
+}
+
+.card:hover p {
+    display: inline-block;
+    line-height: 2rem;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bolder;
+    transition: all ease 0.6s;
+}
+
+.card:hover #card1 {
+    display: none;
+    transition: all ease 0.6s;
+    
+}
+
+.card:hover #card2 {
+    display: none;
+    transition: all ease 0.6s;
+}
+
+.card:hover #card3 {
+    display: none;
+    transition: all ease 0.6s;
+}
+
+.card:hover {
+    color: white;
+    transition: all ease 0.6s;
+    background-color: gray;
+ 
+}
+
+
+.about{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    /* border: 2px solid white; */
+    text-align: center;
+    color: white;
+}
+.h1{
+    font-size: 2rem;
+    color: aqua;
+    height: 10%;
+    /* border: 2px solid white; */
+}
+.left{
+    height: 100%;
+    width: 50%;
+    /* border: 2px solid white; */
+    display: flex;
+}
+.infosec{
+    height: 40%;
+    width: 100%;
+    display: flex;
+}
+.right{
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    
+    /* gap: rem; */
+    flex-direction: column;
+    /* border: 2px solid white; */
+}
+.images{
+    height: 60%;
+    width: 100%;
+    display: flex;
+    margin-left: 10%;
+    /* border: 2px solid white; */
+    align-items: end;
+    justify-content: space-around;
+    
+    
+}
+.mern{
+    height: 50%;
+    width: 30%;
+    margin-left: 50%;
+    background-image: url("MERN-logo.png");
+   
+    background-size: cover;
+    margin: 10%;
+}
+.prog{
+    height: 65%;
+    width: 13%;
+    background-image: url("C_Logo.png");
+    background-size: cover;
+}
+.prog2{
+    height: 60%;
+    width: 14%;
+    background-image: url("python.webp");
+    background-size: cover;
+}
+.right h1{
+    margin-top: 2%;
+    color: aqua;
+    font-size: 3rem;
+}
+.profile{
+    height: 60%;
+    width: 25%;
+    border-radius: 50%;
+    margin-top: 7%;
+    margin-left: 12%;
+    background-image: url("boy.png");
+    background-size: cover;
+    /* border: 2px solid white; */
+}
+.info{
+    height: 40%;
+    width: 65%;
+    margin-top: 10%;
+    color: white;
+    padding-left: 3%;
+    /* padding-top: 5%; */
+    line-height: 7vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.3rem;
+    justify-content: center;
+    /* border: 2px solid white; */
+}
+.education{
+    height: 100vh;
+    display: flex;
+    /* border: 2px solid white; */
+    background-color: black
+}
+.edu{
+    height: 100%;
+    width:100%;
+    /* border: 2px solid white; */
+}
+.levals{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* border: 2px solid white; */
+}
+.heading{
+    height: 10%;
+    text-align: left;
+    font-size: 1.5rem;
+    margin-left: 5%;
+    margin-top: 1%;
+    color: aqua;
+}
+.primary{
+    height: 40%;
+    width: 40%;
+    background-color: #212529 ;
+    margin-left: 3%;
+    margin-top: 2%;
+    border-radius: 20px;
+    display: flex;
+    /* justify-content:space-around; */
+    gap: 1rem;
+    align-items: center;
+    /* border: 2px solid white; */
+}
+.year{
+    height: 100%;
+    width: 50%;
+    color: aqua;
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: space-evenly;
+    /* border: 2px solid white; */
+    text-align: left;
+    gap: 0.4rem;
+}
+.year h1 {
+    margin-left: 5%;
+}
+.year h2 {
+    margin-left: 5%;
+    color: white;
+    font-size: 2rem;
+}
+.iipeimg{
+    height: 70%;
+    width: 13%;
+    background-image: url("iipe.png");
+    background-size: cover;
+}
+.higher{
+    height: 40%;
+    width: 45%;
+    margin-top: 2%;
+    margin-right:5% ;
+    border-radius: 20px;
+    background-color: #212529 ;
+    display: flex;
+    /* border: 2px solid white; */
+}
+.apsimg{
+    height: 90%;
+    width: 30%;
+    background-image: url("aps.png");
+    background-size: cover;
+}
+.kvimg{
+    height: 90%;
+    width: 35%;
+    background-image: url("kv.png");
+    background-size: cover;
+}
+.college{
+    height: 40%;
+    width: 90%;
+    /* border: 2px solid white; */
+    margin-top: 2%;
+    margin-left: 5%;
+    background-color: #212529 ;
+    border-radius: 20px;
+    margin-right:5% ;
+    text-align: left;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.skills{
+    height: 100vh;
+    background-color: black;
+    display: flex;
+}
+.skill{
+    width: 60%;
+    height: 100%;
+}
+.skill h1{
+    color: aqua;
+    margin-left: 5%;
+    margin-top: 5%;
+    font-size: 4vw;
+    text-align: left;
+}
+.skill h2{
+    color: white;
+    text-align: left;
+    line-height: 3.5rem;
+    font-family: cursive;
+    margin-left: 5%;
+    font-size: 1.4rem;
+    
+}
+.projects{
+    width: 40%;
+    height: 100%;
+   
+    
+}
+.projectcards{
+    width: 95%;
+    height: 80%;
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5%;
+  }
+.projectcard{
+    width: 45%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    gap: 1rem;
+    background-color: #212529;
+    border-radius: 20px;
+}
+.projectcard button{
+    height: 17%;
+    width: 28%;font-size: 1.2rem;
+    border-radius: 10px;
+    background-color: aqua;
+    color: black;
+    border: none;
+}
+
+.projectcard button:hover{
+    background-color: white;
+}
+.projectcard:hover{
+    transform: scale(1.1);
+    transition-duration: 200ms;
+    background-color: #212529;
+}
+.contact{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+.container{
+    height: 90%;
+    width: 90%;
+    
+}
+.formhead{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10%;
+    
+    color: aqua;
+    font-size: 2rem;
+}
+.contct{
+     display: flex;
+     flex-direction: column;
+     gap: 1rem;
+     width: 70%;
+     margin-left: 18%;
+     margin-top: 8%;
+     border-color: none;
+}
+.contct label{
+     text-align: left;
+}
+.contct input{
+    height: 4rem;
+    border-radius: 20px;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    border: none;
+    background-color: #212529;
+}
+.contct textarea{
+    height: 4rem;
+    border-radius: 20px;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    border: none;
+    background-color: #212529;
+}
+.form-btn{
+    margin-top: 1.5rem;
+    
+    border-radius: 10px;
+    font-size: 2rem;
+    width: 8rem;
+    color: black;
+    background-color: rgb(131, 247, 247);
+    border: none;
+    height: 3rem;
+}
+.form-btn:hover{
+    background-color: #212529;
+    color: white;
+}
+.footer{
+    background-color: #212529;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}
+.elements{
+   
+    
+}
